@@ -1,0 +1,318 @@
+/* Custom styles to enhance Bootstrap */
+body {
+    min-height: 100vh;
+}
+
+.card {
+    border-radius: 0.75rem;
+    border: none;
+}
+
+.btn {
+    border-radius: 0.5rem;
+}
+
+.form-control, .form-select {
+    border-radius: 0.5rem;
+    padding: 0.625rem 0.75rem;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.table {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.badge-answer {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    font-weight: 600;
+    padding: 0.35em 0.65em;
+    border-radius: 0.25rem;
+}
+
+/* Replace the .btn-delete and .btn-edit styles with these new styles */
+.btn-delete, .btn-edit {
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    border: 1px solid;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-edit {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-edit:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    text-decoration: none;
+}
+
+.btn-delete {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-delete:hover {
+    color: #fff;
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+    text-decoration: none;
+}
+
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    .table-responsive {
+        border-radius: 0.5rem;
+    }
+}
+
+/* Add these styles */
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal .form-label {
+    font-weight: 500;
+}
+
+/* Column widths */
+.question-header {
+    width: 60%;
+}
+
+.answer-header {
+    width: 12%;
+}
+
+.marks-header {
+    width: 12%;
+}
+
+.action-header {
+    width: 16%;
+}
+
+/* Question cell styling */
+.question-cell {
+    min-width: 300px;
+}
+
+.question-text {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.options-list {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.option-item {
+    display: flex;
+    gap: 0.5rem;
+    word-wrap: break-word;
+}
+
+.option-label {
+    font-weight: 500;
+    color: #6c757d;
+    min-width: 25px;
+}
+
+/* Other cell styling */
+.answer-cell, .marks-cell {
+    white-space: nowrap;
+    width: 1%;
+}
+
+.action-cell {
+    width: 1%;
+    white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .question-header {
+        width: 50%;
+    }
+    
+    .answer-header, .marks-header {
+        width: 15%;
+    }
+    
+    .action-header {
+        width: 20%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Adjust table for mobile */
+    .table {
+        display: block;
+        width: 100%;
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .table tr {
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    
+    .table td {
+        position: relative;
+        padding: 1rem;
+        text-align: left !important;
+    }
+    
+    .table td:not(:last-child) {
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    /* Add labels for mobile view */
+    .answer-cell::before {
+        content: "Answer: ";
+        font-weight: 500;
+        margin-right: 0.5rem;
+    }
+    
+    .marks-cell::before {
+        content: "Marks: ";
+        font-weight: 500;
+        margin-right: 0.5rem;
+    }
+    
+    /* Adjust action buttons for mobile */
+    .action-cell .d-flex {
+        justify-content: flex-start !important;
+    }
+    
+    /* Adjust spacing for mobile */
+    .question-text {
+        margin-bottom: 0.75rem;
+    }
+    
+    .options-list {
+        gap: 0.375rem;
+    }
+}
+
+/* Add these styles */
+#previewModal .modal-dialog {
+    max-width: 90%;
+}
+
+#previewModal .table {
+    margin-bottom: 0;
+}
+
+#previewModal .table td {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.form-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Add these styles */
+.bi-file-earmark-spreadsheet {
+    font-size: 1.1em;
+}
+
+#importModal .modal-body {
+    padding: 1.5rem;
+}
+
+#importModal .form-label {
+    font-weight: 500;
+}
+
+/* Add these styles for the import button */
+.card-title {
+    margin-right: 1rem;
+}
+
+@media (max-width: 575.98px) {
+    .card-body {
+        padding: 1rem !important;
+    }
+    
+    .btn i {
+        font-size: 1.1rem;
+    }
+    
+    /* Make the header stack on very small screens */
+    .card-body > .d-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .card-body > .d-flex .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Add these styles for the template download link */
+.template-link {
+    font-size: 0.875rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.template-link:hover {
+    color: #0a58ca;
+}
+
+#importModal .form-label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 575.98px) {
+    #importModal .form-label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .template-link {
+        margin-left: 0;
+    }
+}
